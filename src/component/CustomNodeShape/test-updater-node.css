@@ -1,0 +1,252 @@
+.text-updater-node {
+  height: 50px;
+  border: 1px solid #eee;
+  padding: 5px;
+  border-radius: 5px;
+  background: white;
+}
+
+.text-updater-node label {
+  display: block;
+  color: #777;
+  font-size: 12px;
+}
+.circle-node {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #b4b4b4;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circle-node label {
+  display: block;
+  color: #777;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  justify-content: center;
+}
+
+.circle-node input {
+  box-sizing: border-box;
+  width: 90%;
+  margin: 0 auto;
+  /* Adjust the width as needed */
+  text-align: center; /* Center the text horizontally */
+}
+
+.circle-node input.nodrag {
+  /* Additional styles for the nodrag class if needed */
+}
+.triangle-node,
+.triangle-node:before,
+.triangle-node:after {
+  width: 4em;
+  height: 4em;
+}
+
+.triangle-node {
+  overflow: hidden;
+  position: relative;
+  margin: 7em auto 0;
+  border-radius: 20%;
+  transform: translateY(50%) rotate(30deg) skewY(30deg) scaleX(0.866);
+
+  pointer-events: none;
+}
+
+.triangle-node:before,
+.triangle-node:after {
+  position: absolute;
+  background: orange;
+  pointer-events: auto;
+  content: "";
+}
+
+.triangle-node:before {
+  border-radius: 20% 20% 20% 53%;
+  transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%)
+    skewX(30deg) scaleY(0.866) translateX(-24%);
+}
+
+.triangle-node:after {
+  border-radius: 20% 20% 53% 20%;
+  transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%)
+    skewX(-30deg) scaleY(0.866) translateX(24%);
+}
+
+.triangle-node label {
+  display: block;
+  color: #777;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.triangle-node input {
+  box-sizing: border-box;
+  width: 80%; /* Adjust the width as needed */
+  margin-top: 10px;
+  text-align: center;
+}
+
+.triangle-node input.nodrag {
+  /* Additional styles for the nodrag class if needed */
+}
+
+.diamond-node {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #939ec7;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(45deg);
+}
+
+.diamond-node label {
+  display: block;
+  color: #777;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.diamond-node input {
+  box-sizing: border-box;
+  width: 80%; /* Adjust the width as needed */
+  margin-top: 10px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.diamond-node input.nodrag {
+  /* Additional styles for the nodrag class if needed */
+}
+
+.rectangle-node {
+  width: 60px;
+  height: 30px;
+  border: 1px solid #939ec7;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rectangle-node label {
+  display: block;
+  color: #777;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.rectangle-node.api {
+  background-color: #fcfcca; /* Light red for API */
+}
+
+.rectangle-node.scripting {
+  background-color: #f8f8f8; /* Yellow for Scripting */
+}
+
+.rectangle-node.listener {
+  background-color: #edf5ff; /* Light blue for Listener */
+}
+
+.rectangle-node.sub-process {
+  background-color: #fffceb; /* Pale green for Sub Process */
+}
+
+.rectangle-node.rule {
+  background-color: #ffeaea; /* Plum for Rule */
+}
+
+.rectangle-node.database {
+  background-color: #f8f8f8; /* Light salmon for Database */
+}
+
+/* .trapezoid-node {
+    position: relative;
+    height: 0px;
+    width: 80px;
+    border-top: 80px solid red;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px; 
+  } */
+/* .trapezoid-node:before {
+    content: " ";
+    display: block;
+    background: #bb77ff;
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    transform: skew(10deg);
+    border-radius: 8px;
+    z-index: -1;
+  }
+  .trapezoid-node:after {
+    content: " ";
+    display: block;
+    background: #6e6eff;
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    transform: skew(-10deg);
+    border-radius: 8px;
+    z-index: -1;
+  } */
+.trapezoid-node {
+  width: 70px;
+  height: 50px;
+  position: relative;
+  transform: rotate(180deg);
+}
+
+.trapezoid-node::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f2eff2;
+  border: 1px solid #939ec7;
+  border-radius: 6px;
+  transform: perspective(200px) rotateX(30deg);
+}
+.trapezoid-node label {
+  display: block;
+  color: #777;
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+
+  transform: rotate(180deg);
+}
