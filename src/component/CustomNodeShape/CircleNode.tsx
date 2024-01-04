@@ -2,7 +2,6 @@ import React from "react";
 interface CircleNodeProps {
   data: {
     label: string;
-    // other properties if there are any
   };
 }
 function CircleNode({ data }: CircleNodeProps) {

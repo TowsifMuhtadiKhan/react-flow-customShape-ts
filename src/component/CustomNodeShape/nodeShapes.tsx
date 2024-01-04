@@ -34,6 +34,14 @@ interface Node {
   draggable?: boolean;
 }
 
+const nodeTypes = {
+  circleNode: CircleNode,
+  triangleNode: TriangleNode,
+  diamondNode: DiamondNode,
+  rectangleNode: RectangleNode,
+  trapezoidNode: TrapezoidNode, // Add the new node type
+};
+
 const initialNodes: Node[] = [
   {
     id: "node-1",
@@ -113,14 +121,6 @@ const initialNodes: Node[] = [
     draggable: true,
   },
 ];
-
-const nodeTypes = {
-  circleNode: CircleNode,
-  triangleNode: TriangleNode,
-  diamondNode: DiamondNode,
-  rectangleNode: RectangleNode,
-  trapezoidNode: TrapezoidNode, // Add the new node type
-};
 
 function Flow() {
   const [nodes, setNodes] = useState<Node[]>(initialNodes);
